@@ -2,7 +2,7 @@ function [I] = deriv(image)
 [h,w] = size(mat2gray(image));
 I = zeros(h,w);
 
-kern = [1 1 1; 1 -8 1; 1 1 1]
+kern = [1 1 1; 1 -8 1; 1 1 1];
 
 for i=2:h-1
     for j=2:w-1
