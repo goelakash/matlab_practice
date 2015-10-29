@@ -22,10 +22,11 @@ filled = rgb2gray(insertShape(filled,'FilledRectangle',rect,'Color','white','Opa
 filled = rgb2gray(insertShape(filled,'FilledCircle',circle,'Color','white','Opacity',1.0));
 filled = rgb2gray(insertShape(filled,'FilledPolygon',poly,'Color','white','Opacity',1.0));
 
-% Negative of image ot produce black figures on white
-% dotted = imcomplement(dotted);
-% lined = imcomplement(lined);
-% filled = imcomplement(filled);
+% Negative of image to produce black figures on white
+
+dotted = imcomplement(dotted);
+lined = imcomplement(lined);
+filled = imcomplement(filled);
 
 kernel_size = 3;
 
@@ -53,18 +54,11 @@ filled_fd_y = deriv_y(filled,m,m);
 filled_sd_x = deriv_x(filled_fd_x,m-1,m-1);
 filled_sd_y = deriv_y(filled_fd_y,m-1,m-1);
 
-% dotted(1,:)=0;
-% dotted(400,:)=0;
-% dotted(:,1)=0;
-% dotted(:,400)=0;
-% dotted_median(1,:)=0;
-% dotted_median(400,:)=0;
-% dotted_median(:,1)=0;
-% dotted_median(:,400)=0;
-% dotted_hist(1,:)=0;
-% dotted_hist(400,:)=0;
-% dotted_hist(:,1)=0;
-% dotted_hist(:,400)=0;
+dotted = border(dotted,0);
+dotted_mean = border(dotted_mean,0);
+dotted_median = border(dotted_median,0);
+dotted_hist = border(dotted_hist,0);
+
 figure('name','dotted','numbertitle','off'),imshow(dotted);
 figure('name','dotted_mean','numbertitle','off'),imshow(dotted_mean);
 figure('name','dotted_median','numbertitle','off'),imshow(dotted_median);
