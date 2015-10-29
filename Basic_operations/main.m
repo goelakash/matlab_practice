@@ -63,27 +63,22 @@ figure('name','dotted','numbertitle','off'),imshow(dotted);
 figure('name','dotted_mean','numbertitle','off'),imshow(dotted_mean);
 figure('name','dotted_median','numbertitle','off'),imshow(dotted_median);
 figure('name','dotted_hist','numbertitle','off'),imshow(dotted_hist);
-figure('name','dotted_fd_x','numbertitle','off'),imshow(dotted_fd_x);
-figure('name','dotted_fd_y','numbertitle','off'),imshow(dotted_fd_y);
-figure('name','dotted_sd_x','numbertitle','off'),imshow(dotted_sd_x);
-figure('name','dotted_sd_y','numbertitle','off'),imshow(dotted_sd_y);
+figure('name','dotted_first_deriv','numbertitle','off'),imshow(deriv(dotted));
+figure('name','dotted_second_deriv','numbertitle','off'),imshow(deriv(deriv(dotted)));
+
 
 
 figure('name','lined','numbertitle','off'),imshow(lined);
 figure('name','lined_mean','numbertitle','off'),imshow(lined_mean);
 figure('name','lined_median','numbertitle','off'),imshow(lined_median);
 figure('name','lined_hist','numbertitle','off'),imshow(lined_hist);
-figure('name','lined_fd_x','numbertitle','off'),imshow(lined_fd_x);
-figure('name','lined_fd_y','numbertitle','off'),imshow(lined_fd_y);
-figure('name','lined_sd_x','numbertitle','off'),imshow(lined_sd_x);
-figure('name','lined_sd_y','numbertitle','off'),imshow(lined_sd_y);
+figure('name','lined_first_deriv','numbertitle','off'),imshow(deriv(lined));
+figure('name','lined_second_deriv','numbertitle','off'),imshow(deriv(deriv(lined)));
 
  
 figure('name','filled','numbertitle','off'),imshow(filled);
 figure('name','filled_mean','numbertitle','off'),imshow(filled_mean);
 figure('name','filled_median','numbertitle','off'),imshow(filled_median);
 figure('name','filled_hist','numbertitle','off'),imshow(filled_hist);
-figure('name','filled_fd_x','numbertitle','off'),imshow(filled_fd_x);
-figure('name','filled_fd_y','numbertitle','off'),imshow(filled_fd_y);
-figure('name','filled_sd_x','numbertitle','off'),imshow(filled_sd_x);
-figure('name','filled_sd_y','numbertitle','off'),imshow(filled_sd_y);
+figure('name','filled_first_deriv','numbertitle','off'),imshow(deriv(filled));
+figure('name','filled_second_deriv','numbertitle','off'),imshow(deriv(deriv(filled)));
